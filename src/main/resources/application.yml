@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: jspprac2
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
