@@ -17,7 +17,7 @@
                         <h3>Sign Up</h3>
                     </div>
                     <div class="card-body">
-                        <form id="signupForm">
+                        <form method="post" id="signupForm">
                             <div class="form-group">
                                 <label for="email">Email address</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
@@ -28,7 +28,7 @@
                             </div>
                             <button type="button" class="btn btn-primary btn-block" onclick="signup()">Sign Up</button>
                         </form>
-                        <div class="text-danger mt-2" id="error-message">
+                        <div class="text-danger mt-2" id="altmsg">
                             <c:if test="${not empty error}">
                                 ${error}
                             </c:if>

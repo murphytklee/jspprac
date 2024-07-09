@@ -22,7 +22,7 @@ public class MemberService {
     public void signup(final SignupRequest signupRequest) throws Exception {
 
         if (memberRepository.findByEmail(signupRequest.getEmail()).isPresent()) {
-            throw new IllegalStateException();
+            throw new IllegalStateException("이미 존재하는 회원입니다");
         }
 
         Member member = Member.builder()

@@ -17,7 +17,7 @@
                         <h3>Login</h3>
                     </div>
                     <div class="card-body">
-                        <form id="loginForm">
+                        <form method="post" id="loginForm">
                             <div class="form-group">
                                 <label for="email">Email address</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
@@ -27,8 +27,8 @@
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
                             <button type="button" class="btn btn-primary btn-block" onclick="login()">Login</button>
-                        </form>
-                        <div class="text-danger mt-2" id="error-message">
+                        </form>                        
+                        <div class="text-danger mt-2" id="altmsg">
                             <c:if test="${not empty error}">
                                 ${error}
                             </c:if>
