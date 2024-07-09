@@ -40,9 +40,9 @@ public class MemberController {
     }
 
     @PostMapping("/login")
-    public String handleLogin(@RequestBody LoginRequest loginRequest) {
+    public void handleLogin(@RequestBody LoginRequest loginRequest) throws Exception {
         System.out.println("email = " + loginRequest.getEmail());
         System.out.println("password = " + loginRequest.getPassword());
-        return "index";
+        memberService.login(loginRequest);
     }
 }

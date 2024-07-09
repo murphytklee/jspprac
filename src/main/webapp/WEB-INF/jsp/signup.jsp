@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="card-footer text-center">
-                        <a href="${pageContext.request.contextPath}/login">Already have an account? Login here</a>
+                        <a href="/login">Already have an account? Login here</a>
                     </div>
                 </div>
             </div>
@@ -46,26 +46,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function signup() {
-            const email = $('#email').val();
-            const password = $('#password').val();
-
-            $.ajax({
-                type: 'POST',
-                url: '${pageContext.request.contextPath}/signup',
-                contentType: 'application/json',
-                data: JSON.stringify({ email: email, password: password }),
-                success: function(response) {
-                    // Redirect to the main page upon successful signup
-                    window.location.href = '${pageContext.request.contextPath}/login';
-                },
-                error: function(xhr, status, error) {
-                    // Show error message on signup failure
-                    $('#error-message').text('Signup failed. Email might be already in use.');
-                }
-            });
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/resources/js/signup.js"></script>
 </body>
 </html>

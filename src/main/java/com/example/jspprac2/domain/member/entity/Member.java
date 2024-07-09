@@ -7,11 +7,13 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @Builder
 @Getter
 @Entity
+@NoArgsConstructor
 public class Member {
     
     @Id
@@ -20,6 +22,5 @@ public class Member {
 
     private String email;
     private String password;
-    
 
 }

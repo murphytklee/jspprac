@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="card-footer text-center">
-                        <a href="${pageContext.request.contextPath}/signup">Don't have an account? Sign up here</a>
+                        <a href="/signup">Don't have an account? Sign up here</a>
                     </div>
                 </div>
             </div>
@@ -45,27 +45,8 @@
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function login() {
-            const email = $('#email').val();
-            const password = $('#password').val();
-
-            $.ajax({
-                type: 'POST',
-                url: '${pageContext.request.contextPath}/login',
-                contentType: 'application/json',
-                data: JSON.stringify({ email: email, password: password }),
-                success: function(response) {
-                    // Redirect to the main page upon successful login
-                    window.location.href = '${pageContext.request.contextPath}/';
-                },
-                error: function(xhr, status, error) {
-                    // Show error message on login failure
-                    $('#error-message').text('Login failed. Please check your email and password.');
-                }
-            });
-        }
-    </script>
+    <script type="text/javascript" src="/resources/js/login.js"></script>
 </body>
 </html>
