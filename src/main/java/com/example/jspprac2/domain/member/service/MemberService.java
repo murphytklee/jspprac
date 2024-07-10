@@ -16,7 +16,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Transactional
 public class MemberService {
-
+    /**
+     *  @TODO : Security, OAuth, Service 로직 리팩토링
+     */
     private final MemberRepository memberRepository;
 
     public void signup(final SignupRequest signupRequest) throws Exception {

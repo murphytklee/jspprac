@@ -1,0 +1,25 @@
+body {
+    font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #333;
+    background-color: gray;
+    text-rendering: optimizeLegibility;
+}
+
+.auth-wrapper .auth-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 13px 6px 8px 0px rgba(0, 0, 0, .5), 1px -1px 20px rgba(0, 0, 0, .25);
+    max-width: 300px;
+    width: 30%;
+    margin: 10% 0;
+    z-index: 2;
+    border-radius: 10px;
+    BACKGROUND-POSITION-X: left;
+    BACKGROUND-POSITION-Y: bottom;
+}
+
+.message-container {
+    height: 20px;
+}
