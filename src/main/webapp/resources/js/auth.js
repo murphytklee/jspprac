@@ -1,5 +1,4 @@
 function handleAuthSubmit(url) {
-    console.log("hello")
     if (validateForm()) {
         $("#auth-form").attr("action", url);
         $("#auth-form").submit();

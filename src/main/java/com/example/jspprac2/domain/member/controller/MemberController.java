@@ -19,7 +19,6 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    // View Mapping
     @GetMapping("/")
     public String home(){
         return "index";
@@ -63,7 +62,7 @@ public class MemberController {
         } catch (Exception e) {
             model.addAttribute("errorMessage", e.getMessage());
             System.out.println(e.getMessage());
-            return "/login";
+            return "login";
         }
         return "redirect:/";
     }
