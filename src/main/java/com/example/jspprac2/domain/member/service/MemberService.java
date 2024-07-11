@@ -2,6 +2,8 @@ package com.example.jspprac2.domain.member.service;
 
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
 import com.example.jspprac2.domain.member.dto.request.LoginRequest;
@@ -9,7 +11,6 @@ import com.example.jspprac2.domain.member.dto.request.SignupRequest;
 import com.example.jspprac2.domain.member.entity.Member;
 import com.example.jspprac2.domain.member.repository.MemberRepository;
 
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @Service
