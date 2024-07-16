@@ -1,38 +1,55 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!-- ---------------------------------------------------------------------------------------------------------------------------
-  --  [ NAVIGATION AREA ] 
+  --  [ Header NAVIGATION AREA ] 
   --  @TODO 1. User Info Modal 구현 (Absolute 제거)
   --        2. nav-collapse toggle 아이콘 크기 조정
   --------------------------------------------------------------------------------------------------------------------------- -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
     <div class="container-fluid d-flex justify-content-between">
-            <a class="navbar-brand" href="#">Home</a> 
-        <!-- collapse시 Toggle -->
-            <button class="navbar-toggler" id="navbar-toggle-btn" type="button" data-toggle="collapse" data-target="#nav-tab" aria-controls="nav-tab" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Nav Logo -->
+        <a class="navbar-brand" href="" onclick="window.location.href='/'">Home</a> 
+         
+        <!-- Nav side Toggle Btn -->
+        <div id="hide-menu" class="btn-header transparent mb-2" title="Toggle Menu" onclick="toggleSidebar()">
+            <a href="javascript:void(0);" class="btn-toggle" style="font-size:16px;">
+                <i class="fa-solid fa-indent fa-flip-horizontal"></i>
+                <span class="d-none">사이드 메뉴</span>
+            </a>
+        </div>
+
+        <!-- Nav Head Toggle Btn -->
+        <button class="navbar-toggler" id="navbar-toggle-btn" type="button" data-toggle="collapse" data-target="#nav-tab" aria-controls="nav-tab" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Head Content -->
         <div class="collapse navbar-collapse justify-content-center" id="nav-tab">
             <ul class="navbar-nav">
-                <li class="nav-item1">
-                    <a class="nav-link" href="#">공통</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-menu="common">공통</a>
                 </li>
-                <li class="nav-item2">
-                    <a class="nav-link" href="#">인사</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-menu="hr">인사</a>
                 </li>
-                <li class="nav-item3">
-                    <a class="nav-link" href="#">회계</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-menu="accounting">회계</a>
                 </li>
-                <li class="nav-item1">
-                    <a class="nav-link" href="#">Form</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-menu="form">Form</a>
                 </li>
-                <li class="nav-item2">
-                    <a class="nav-link" href="#">Tap</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-menu="tap">Tap</a>
                 </li>
-                <li class="nav-item3">
-                    <a class="nav-link" href="#">Grid</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-menu="grid">Grid</a>
                 </li>
             </ul>
         </div>
+
+        <!-- Nav Profile -->
         <div class="header-right-panel">
             <button type="button" id="ifrmPageMemo" title="페이지 메모 활성화" class="btn btn-sm" style="display:none;">
                 <i class="far fa-sticky-note"></i>
@@ -85,3 +102,13 @@
         </div>
     </div>
 </nav>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------
+  --  [ SIDE NAVIGATION AREA ] 
+  --------------------------------------------------------------------------------------------------------------------------- -->
+
+<div id="sidebar" class="sidebar" style="width: 150px;">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+    </ul>
+</div>

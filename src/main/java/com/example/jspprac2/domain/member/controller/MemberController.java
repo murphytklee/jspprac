@@ -19,10 +19,10 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    @GetMapping("/")
-    public String home(){
-        return "index";
-    }
+    // @GetMapping("/")
+    // public String home(){
+    //     return "index";
+    // }
 
     @GetMapping("/signup")
     public String viewSignupPage() {

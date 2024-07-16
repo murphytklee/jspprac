@@ -12,9 +12,9 @@
 
         <!-- ( EXTENDS ) -->
         <definition name="index" extends="layout.default">
-            <put-attribute name="body" expression=""/>
+            <put-attribute name="body" expression="/WEB-INF/jsp/bodyexample.jsp"/>
         </definition>
-
+        
         <definition name="*/*" extends="layout.default">
             <put-attribute name="body" expression="/WEB-INF/jsp/{1}/{2}.jsp"></put-attribute>
         </definition>
